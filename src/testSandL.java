@@ -5,7 +5,7 @@ import java.awt.*;
 
 import java.util.Arrays;
 
-public class testSandL {
+public class testSandL extends JFrame{
 
     public static void main(String[] args) {
 
@@ -13,9 +13,12 @@ public class testSandL {
         boolean gameOver=false;
         int turn =0;
         int[] player1={0,0}, player2={0,0};
+        JLabel jLabels;
 
+        //private ImageIcon background = new ImageIcon("")
+        ImageIcon backgroundBoard=new ImageIcon("C:\\Users\\User\\Desktop\\Snakes and ladders.png");
+        jLabels = new JLabel();
 
-        //ImageIcon backgroundBoard=new ImageIcon("C:\\Users\\User\\Desktop\\Snakes and ladders.png");
 
 
         //player position
