@@ -15,6 +15,7 @@ public class Board extends JFrame {
 
         int boardWidth=600, boardHeight=500, tileSize=100;
 
+        boolean isRight=true;
 
 
         while (gameOver==false){
@@ -28,29 +29,52 @@ public class Board extends JFrame {
 
 
             //int roll = (int) Math.round( (Math.random() * 4 + 1));
-            int roll = 1;
+            int roll = 2;
             //count++;
 
             if (p1y<=0) {
                 gameOver=true;
             }
             diceRoll = roll * tileSize;
-            p1x+=diceRoll;
-            if (p1x==boardWidth){
-                p1y-=tileSize;
 
-                p1x=(boardWidth%diceRoll);
-            }
+           if (isRight){
+               p1x+=diceRoll;
+               if (p1x>=boardWidth){
+
+                   p1y-=tileSize;
+                   p1x+=diceRoll;
+                   p1x=diceRoll%p1x;
+                   isRight=false;
+               }
+           }
+           else
+           {
+
+                   p1x-=diceRoll;
+                   if (p1x<0){
+
+                       p1y-=tileSize;
+                       p1x=0;
+                       p1x+=diceRoll-tileSize;
+
+                       isRight=true;
+                   }
+
+
+
+           }
 
 
             m.setP1x(p1x);
+            m.setP1y(p1y);
             player1Turn = false;
-            System.out.println(diceRoll);
+            System.out.println("x"+diceRoll);
             roll = (int) Math.round( (Math.random() * 4 + 1));
             diceRoll = roll * 100;
             p2x+=diceRoll;
             m.setP2x(p2x);
-            System.out.println(diceRoll);
+
+            System.out.println("y"+diceRoll);
 
 
             String pause = JOptionPane.showInputDialog("test");

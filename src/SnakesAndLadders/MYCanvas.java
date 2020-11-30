@@ -39,7 +39,7 @@ public class MYCanvas extends Canvas {
     public void paint(Graphics g)
         {
                 Toolkit t=Toolkit.getDefaultToolkit();
-                Image i=t.getImage("src\\SnakesAndLadders\\snakes and ladders bord.png");
+                Image i=t.getImage("src/SnakesAndLadders/salBackground.png");
                 g.drawImage(i, 0,0,600, 500,this);
 
 
