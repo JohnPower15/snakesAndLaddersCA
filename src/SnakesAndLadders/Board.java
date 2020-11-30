@@ -1,67 +1,72 @@
 package SnakesAndLadders;
 
 import javax.swing.*;
-import java.awt.*;
-import java.util.*;
 
 public class Board extends JFrame {
 
-    //private JLabel jb[];
+
     public Board() {
-        /*
+        Dice dice = new Dice();
+        boolean gameOver=false;
+        int count=0;
 
-       BorderLayout layout = new BorderLayout(6, 8);
-        setLayout(layout);
+        int p1x=0,p1y=450,p2x=0,p2y=450;
+        int diceRoll, turn=0;
 
-        String regions[] = {BorderLayout.NORTH, BorderLayout.SOUTH, BorderLayout.EAST,
-                BorderLayout.WEST, BorderLayout.CENTER};
+        int boardWidth=600, boardHeight=500, tileSize=100;
 
-        jb = new JLabel[9];
 
-        for (int i = 0; i < jb.length; i++) {
-            jb[i] = new JLabel(""+(i+1),SwingConstants.CENTER);
-            jb[i].setBorder(BorderFactory.createLineBorder(Color.BLACK, 3));
-            add(jb[i]);
 
+        while (gameOver==false){
+
+            MYCanvas m = new MYCanvas(p1x,p1y,p2x,p2y);
+            boolean player1Turn = true;
+            JFrame f = new JFrame();
+            f.add(m);
+            f.setSize(800, 600);
+            f.setVisible(true);
+
+
+            //int roll = (int) Math.round( (Math.random() * 4 + 1));
+            int roll = 1;
+            //count++;
+
+            if (p1y<=0) {
+                gameOver=true;
+            }
+            diceRoll = roll * tileSize;
+            p1x+=diceRoll;
+            if (p1x==boardWidth){
+                p1y-=tileSize;
+
+                p1x=(boardWidth%diceRoll);
+            }
+
+
+            m.setP1x(p1x);
+            player1Turn = false;
+            System.out.println(diceRoll);
+            roll = (int) Math.round( (Math.random() * 4 + 1));
+            diceRoll = roll * 100;
+            p2x+=diceRoll;
+            m.setP2x(p2x);
+            System.out.println(diceRoll);
+
+
+            String pause = JOptionPane.showInputDialog("test");
+            f.setVisible(false);
+            //f.repaint();
         }
 
 
 
-        setSize(400, 300);
-
-        setVisible(true);
-    }
-
-
-    private ImageIcon backgroundBoard=new ImageIcon("C:\\Users\\User\\Desktop\\Snakes and ladders.png");
-    public void settingBackground()
-    {
-        GridLayout layout = new GridLayout(5, 6, 0,0);
-        setLayout(layout);
-
-        setLocation(300,10);
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setVisible(true);
-    }
-
-    public void setBackgroundBoard(ImageIcon backgroundBoard) {
-        this.backgroundBoard = backgroundBoard;
-    }
-
-    public ImageIcon getBackgroundBoard() {
-        return backgroundBoard;
-    }
-    */
-
-        MYCanvas m=new MYCanvas();
-        JFrame f = new JFrame();
-        f.add(m);
-        f.setSize(690, 700);
-        f.setVisible(true);
-        JLabel backgroundImage = new JLabel(new ImageIcon(getClass().getResource("C:\\Users\\User\\IdeaProjects\\Snakes_And_Ladders\\src\\SnakesAndLadders.")));
-        backgroundImage.setBounds(0, 0, f.getWidth(), f.getHeight());
-        f.add(backgroundImage);
 
 
     }
-}
+
+
+
+    }
+
+ 
+
