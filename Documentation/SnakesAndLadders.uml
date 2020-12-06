@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement>SnakesAndLadders</OriginalElement>
+  <nodes>
+    <node x="454.0" y="6.0">SnakesAndLadders.MovePlayer</node>
+    <node x="210.0" y="121.5">SnakesAndLadders.Dice</node>
+    <node x="242.0" y="402.0">SnakesAndLadders.Board</node>
+    <node x="183.5" y="506.0">SnakesAndLadders.testSnakesAndLadders</node>
+    <node x="-42.0" y="-16.0">SnakesAndLadders.MYCanvas</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="SnakesAndLadders.Board" target="SnakesAndLadders.MYCanvas">
+      <point x="-37.91666666666663" y="-27.0" />
+      <point x="249.58333333333337" y="382.0" />
+      <point x="47.5" y="382.0" />
+      <point x="-47.5" y="171.0" />
+    </edge>
+    <edge source="SnakesAndLadders.testSnakesAndLadders" target="SnakesAndLadders.Board">
+      <point x="-52.0" y="-27.0" />
+      <point x="235.5" y="481.0" />
+      <point x="264.75" y="481.0" />
+      <point x="-22.75" y="27.0" />
+    </edge>
+    <edge source="SnakesAndLadders.Board" target="SnakesAndLadders.MovePlayer">
+      <point x="22.75" y="-27.0" />
+      <point x="310.25" y="372.0" />
+      <point x="429.0" y="372.0" />
+      <point x="-44.0" y="138.0" />
+    </edge>
+    <edge source="SnakesAndLadders.Board" target="SnakesAndLadders.Dice">
+      <point x="-7.583333333333314" y="-27.0" />
+      <point x="279.9166666666667" y="362.0" />
+      <point x="248.75" y="362.0" />
+      <point x="-38.75" y="49.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="1.0" x="122.5" y="250.0" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Fields</Category>
+    <Category>Constructors</Category>
+    <Category>Methods</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+
