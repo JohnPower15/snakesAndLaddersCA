@@ -8,9 +8,9 @@ class Main {
     static class QueueEntry {
         int vertex; // Vertex number
         int distance; // distance of this vertex from source
-    };
+    }
 
-    static int MinimumDiceThrows(int board[], int N) {
+    static int MinimumDiceThrows(int[] board, int N) {
 
         boolean[] visited = new boolean[N];
 
